@@ -19,7 +19,7 @@ namespace sasm {
         ri, // Instruction register: pointer to current instruction
         rl, // Size / length register: size of variables
         rs, // Stack register: pointer to current position in stack
-        xx // ((end of enum)) not a register
+        xx  // ((end of enum))
     };
 
     /**

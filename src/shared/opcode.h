@@ -1,10 +1,10 @@
 #pragma once
 namespace sasm {
     /**
-    * sasm::opcode
-    * Opcodes for instructions read by the virtual processor
-    * [[This is not the final list of opcodes!]] SASM is in development and these might change.
-    */
+     * sasm::opcode
+     * Opcodes for instructions read by the virtual processor
+     * [[This is not the final list of opcodes!]] SASM is in development and these might change.
+     */
     enum opcode {
         /** WordSize
          *  Set working size {argument 1} of variables (register rl)
