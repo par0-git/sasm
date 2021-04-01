@@ -1,4 +1,5 @@
 #pragma once
+#include <stdint.h>
 namespace sasm {
     namespace vm {
         /**
@@ -9,11 +10,13 @@ namespace sasm {
            * uint8_t current variable size / word size
            * ... [7]
 
+         * register_type[register_enum::xx] Processor registers
+
          * uint8_t[stack_size] / register_type[?] Stack memory
 
          * executable_data_type[?] Executable
 
-         * uint8_t[?] Post-executable padding
+         * uint8_t[>=4] Post-executable padding
          */
 
         /**
@@ -25,7 +28,7 @@ namespace sasm {
             struct flags {
                 uint8_t word_size; // "current variable size / word size"
                 uint8_t pad[7]; // "..."
-            }
+            };
         }
     }
 }

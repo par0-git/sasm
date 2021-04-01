@@ -7,7 +7,7 @@ namespace sasm {
     struct executable_header {
         uint8_t signature[2]; // [sa] / [0x73, 0x61] 
         uint64_t offset; // (executable_ptr + offset) == first instruction
-    }
+    };
 
     /**
      * sasm::executable_data_type
