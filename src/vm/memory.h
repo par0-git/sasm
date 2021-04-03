@@ -8,6 +8,8 @@ namespace sasm {
 
          * uint8_t[8] Processor byte flags:
            * uint8_t current variable size / word size
+           * uint8_t execution status (bitflags)
+            * bit execution status: 
            * ... [7]
 
          * register_type[register_enum::xx] Processor registers
@@ -27,7 +29,17 @@ namespace sasm {
             /* "Processor byte flags" */
             struct flags {
                 uint8_t word_size; // "current variable size / word size"
-                uint8_t pad[7]; // "..."
+                uint8_t execution; // "execution status"
+                uint8_t pad[6]; // "..."
+            };
+
+            /**
+             * "Processor byte flags"->"execution" 
+             * These can all be set at the same time!
+             */
+            enum execution_status {
+                active = 0x01, // "active" The processor is running
+                waiting = 0x02 // "waiting" The processor is running but not reading instructions
             };
         }
     }
