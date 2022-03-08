@@ -1,3 +1,2 @@
 # src/vm
-## This is the SASM interpreter / VM.
-This parses *SASM byte code* and runs it. 
+This part of the code is the interpreter. It aims to run SemiAssembly bytecode, compiled or not.
