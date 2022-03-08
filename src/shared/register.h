@@ -1,30 +1,29 @@
 #pragma once
-#include <stdint.h> // uint64_t
+#include "number.h" // u64
 
 namespace sasm {
     /**
-     * sasm::register_enum
-     * Registers used in the virtual processor / interpreter. Called register_enum due to C/C++ having the "register" storage class
+     * sasm::registers
+     * Registers used in the virtual processor / interpreter.
      * [[This is not the final list of registers!]] SASM is in development and these might change.
      */
-    enum register_enum {
-        r0,
-        r1,
-        r2,
-        r3,
-        r4,
-        r5,
-        r6,
-        r7,
-        ri, // Instruction register: pointer to current instruction
-        rl, // Size / length register: size of variables
-        rs, // Stack register: pointer to current position in stack
+    enum registers {
+        r0, // Generic
+        r1, // Generic
+        r2, // Generic
+        r3, // Generic
+        rr,  // Result register: the result of comparisons etc... can be used normally
+        rxi,  // Instruction register: pointer to current instruction
+        rxe,  // Executable register: pointer to executable start
+        rxs,  // Stack register: pointer to current position in stack
+        r8, // Generic
+        r9, // Generic
+        r10, // Generic
+        r11, // Generic
+        r12, // Generic
+        r13, // Generic
+        r14, // Generic
+        r15, // Generic
         xx  // ((end of enum))
     };
-
-    /**
-     * sasm::register_type
-     * Typedef for values of register data
-     */
-    typedef uint64_t register_type;
 }
